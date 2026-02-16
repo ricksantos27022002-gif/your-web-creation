@@ -30,8 +30,8 @@ const Index = () => {
           alt="Fortti Seguros"
           className="w-20 h-20 rounded-full object-cover mb-3"
         />
-        <h1 className="text-xl font-bold tracking-wide" style={{ color: "hsl(43 96% 56%)" }}>
-          Seu Nome
+        <h1 className="text-xl font-bold tracking-wide text-white">
+          PEDRO HENRIQUE CORRETOR DE SEGUROS
         </h1>
         <p className="text-sm mt-1" style={{ color: "hsl(43 96% 56% / 0.6)" }}>
           @seuusuario
