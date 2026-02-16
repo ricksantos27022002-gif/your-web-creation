@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import logoFortti from "@/assets/logo-fortti.png";
 import link1 from "@/assets/link-1.png";
 import link2 from "@/assets/link-2.png";
 import link3 from "@/assets/link-3.png";
@@ -25,12 +25,11 @@ const Index = () => {
     >
       {/* Profile */}
       <div className="relative z-10 flex flex-col items-center mb-8">
-        <div
-          className="w-20 h-20 rounded-full border-2 flex items-center justify-center mb-3"
-          style={{ borderColor: "hsl(43 96% 56%)", background: "hsl(0 0% 10%)" }}
-        >
-          <Sparkles className="w-8 h-8" style={{ color: "hsl(43 96% 56%)" }} />
-        </div>
+        <img
+          src={logoFortti}
+          alt="Fortti Seguros"
+          className="w-20 h-20 rounded-full object-cover mb-3"
+        />
         <h1 className="text-xl font-bold tracking-wide" style={{ color: "hsl(43 96% 56%)" }}>
           Seu Nome
         </h1>
