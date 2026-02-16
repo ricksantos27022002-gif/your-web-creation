@@ -60,8 +60,8 @@ const Index = () => {
         ))}
       </div>
 
-      <p className="relative z-10 mt-10 text-xs" style={{ color: "hsl(0 0% 40%)" }}>
-        ✨ Feito com amor
+      <p className="relative z-10 mt-10 text-sm font-semibold" style={{ color: "hsl(43 96% 56% / 0.7)" }}>
+        Fortti Seguros
       </p>
     </div>
   );
