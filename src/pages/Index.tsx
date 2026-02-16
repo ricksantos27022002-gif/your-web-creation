@@ -48,10 +48,7 @@ const Index = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="block rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
-            style={{
-              border: "1.5px solid hsl(43 96% 56% / 0.4)",
-              boxShadow: "0 0 8px hsl(43 96% 56% / 0.15)",
-            }}
+            
           >
             <img
               src={link.image}
