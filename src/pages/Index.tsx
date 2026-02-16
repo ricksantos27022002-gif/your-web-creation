@@ -17,39 +17,12 @@ const links = [
   { id: 7, image: link7, url: "https://wa.me/", alt: "Outros serviços" },
 ];
 
-const GoldenSparkle = ({ style }: { style: React.CSSProperties }) => (
-  <div
-    className="absolute rounded-full pointer-events-none animate-pulse"
-    style={{
-      width: Math.random() * 4 + 2,
-      height: Math.random() * 4 + 2,
-      background: "radial-gradient(circle, hsl(43 96% 56%), hsl(43 96% 30%))",
-      boxShadow: "0 0 6px 2px hsl(43 96% 56% / 0.4)",
-      ...style,
-    }}
-  />
-);
-
-const sparkles = Array.from({ length: 30 }, (_, i) => ({
-  id: i,
-  style: {
-    top: `${Math.random() * 100}%`,
-    left: `${Math.random() * 100}%`,
-    animationDelay: `${Math.random() * 3}s`,
-    animationDuration: `${2 + Math.random() * 3}s`,
-  },
-}));
-
 const Index = () => {
   return (
     <div
       className="relative min-h-screen flex flex-col items-center py-10 px-4 overflow-hidden"
       style={{ background: "linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 8%), hsl(0 0% 4%))" }}
     >
-      {sparkles.map((s) => (
-        <GoldenSparkle key={s.id} style={s.style} />
-      ))}
-
       {/* Profile */}
       <div className="relative z-10 flex flex-col items-center mb-8">
         <div
@@ -75,12 +48,15 @@ const Index = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="block rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
-            style={{ boxShadow: "0 0 15px hsl(43 96% 56% / 0.1)" }}
+            style={{
+              border: "1.5px solid hsl(43 96% 56% / 0.4)",
+              boxShadow: "0 0 8px hsl(43 96% 56% / 0.15)",
+            }}
           >
             <img
               src={link.image}
               alt={link.alt}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto block"
               loading="lazy"
             />
           </a>
