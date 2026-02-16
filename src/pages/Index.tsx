@@ -1,13 +1,20 @@
-import { Instagram, Music, Youtube, MessageCircle, Twitter, Facebook, Globe, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import link1 from "@/assets/link-1.png";
+import link2 from "@/assets/link-2.png";
+import link3 from "@/assets/link-3.png";
+import link4 from "@/assets/link-4.png";
+import link5 from "@/assets/link-5.png";
+import link6 from "@/assets/link-6.png";
+import link7 from "@/assets/link-7.png";
 
 const links = [
-  { id: 1, title: "Instagram", url: "https://instagram.com", icon: Instagram },
-  { id: 2, title: "TikTok", url: "https://tiktok.com", icon: Music },
-  { id: 3, title: "YouTube", url: "https://youtube.com", icon: Youtube },
-  { id: 4, title: "WhatsApp", url: "https://wa.me/", icon: MessageCircle },
-  { id: 5, title: "Twitter / X", url: "https://x.com", icon: Twitter },
-  { id: 6, title: "Facebook", url: "https://facebook.com", icon: Facebook },
-  { id: 7, title: "Site", url: "https://seusite.com", icon: Globe },
+  { id: 1, image: link1, url: "https://wa.me/", alt: "Fique 100% protegido" },
+  { id: 2, image: link2, url: "https://wa.me/", alt: "Proteja seu maquinário" },
+  { id: 3, image: link3, url: "https://wa.me/", alt: "Seguro de vida" },
+  { id: 4, image: link4, url: "https://wa.me/", alt: "Proteja a conquista da família" },
+  { id: 5, image: link5, url: "https://wa.me/", alt: "Consórcio e Financiamento" },
+  { id: 6, image: link6, url: "https://wa.me/", alt: "Seguro safra" },
+  { id: 7, image: link7, url: "https://wa.me/", alt: "Outros serviços" },
 ];
 
 const GoldenSparkle = ({ style }: { style: React.CSSProperties }) => (
@@ -16,14 +23,14 @@ const GoldenSparkle = ({ style }: { style: React.CSSProperties }) => (
     style={{
       width: Math.random() * 4 + 2,
       height: Math.random() * 4 + 2,
-      background: `radial-gradient(circle, hsl(43 96% 56%), hsl(43 96% 30%))`,
+      background: "radial-gradient(circle, hsl(43 96% 56%), hsl(43 96% 30%))",
       boxShadow: "0 0 6px 2px hsl(43 96% 56% / 0.4)",
       ...style,
     }}
   />
 );
 
-const sparkles = Array.from({ length: 40 }, (_, i) => ({
+const sparkles = Array.from({ length: 30 }, (_, i) => ({
   id: i,
   style: {
     top: `${Math.random() * 100}%`,
@@ -35,22 +42,23 @@ const sparkles = Array.from({ length: 40 }, (_, i) => ({
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen flex flex-col items-center py-12 px-4 overflow-hidden"
+    <div
+      className="relative min-h-screen flex flex-col items-center py-10 px-4 overflow-hidden"
       style={{ background: "linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 8%), hsl(0 0% 4%))" }}
     >
-      {/* Golden sparkles */}
       {sparkles.map((s) => (
         <GoldenSparkle key={s.id} style={s.style} />
       ))}
 
-      {/* Profile area */}
-      <div className="relative z-10 flex flex-col items-center mb-10">
-        <div className="w-24 h-24 rounded-full border-2 flex items-center justify-center mb-4"
+      {/* Profile */}
+      <div className="relative z-10 flex flex-col items-center mb-8">
+        <div
+          className="w-20 h-20 rounded-full border-2 flex items-center justify-center mb-3"
           style={{ borderColor: "hsl(43 96% 56%)", background: "hsl(0 0% 10%)" }}
         >
-          <Sparkles className="w-10 h-10" style={{ color: "hsl(43 96% 56%)" }} />
+          <Sparkles className="w-8 h-8" style={{ color: "hsl(43 96% 56%)" }} />
         </div>
-        <h1 className="text-2xl font-bold tracking-wide" style={{ color: "hsl(43 96% 56%)" }}>
+        <h1 className="text-xl font-bold tracking-wide" style={{ color: "hsl(43 96% 56%)" }}>
           Seu Nome
         </h1>
         <p className="text-sm mt-1" style={{ color: "hsl(43 96% 56% / 0.6)" }}>
@@ -58,59 +66,28 @@ const Index = () => {
         </p>
       </div>
 
-      {/* Links */}
-      <div className="relative z-10 flex flex-col gap-4 w-full max-w-md">
-        {links.map((link) => {
-          const Icon = link.icon;
-          return (
-            <a
-              key={link.id}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex items-center gap-4 rounded-2xl px-5 py-4 transition-all duration-300 hover:scale-[1.02]"
-              style={{
-                background: "hsl(0 0% 10% / 0.8)",
-                border: "1px solid hsl(43 96% 56% / 0.2)",
-                backdropFilter: "blur(8px)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "hsl(43 96% 56% / 0.6)";
-                e.currentTarget.style.boxShadow = "0 0 20px hsl(43 96% 56% / 0.15)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "hsl(43 96% 56% / 0.2)";
-                e.currentTarget.style.boxShadow = "none";
-              }}
-            >
-              {/* Numbered image placeholder */}
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center text-lg font-bold shrink-0"
-                style={{
-                  background: "linear-gradient(135deg, hsl(43 96% 56% / 0.15), hsl(43 96% 30% / 0.1))",
-                  border: "1px solid hsl(43 96% 56% / 0.3)",
-                  color: "hsl(43 96% 56%)",
-                }}
-              >
-                {link.id}
-              </div>
-
-              <div className="flex-1">
-                <span className="text-base font-semibold" style={{ color: "hsl(0 0% 95%)" }}>
-                  {link.title}
-                </span>
-              </div>
-
-              <Icon className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-                style={{ color: "hsl(43 96% 56% / 0.7)" }}
-              />
-            </a>
-          );
-        })}
+      {/* Image Links */}
+      <div className="relative z-10 flex flex-col gap-4 w-full max-w-lg">
+        {links.map((link) => (
+          <a
+            key={link.id}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
+            style={{ boxShadow: "0 0 15px hsl(43 96% 56% / 0.1)" }}
+          >
+            <img
+              src={link.image}
+              alt={link.alt}
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </a>
+        ))}
       </div>
 
-      {/* Footer */}
-      <p className="relative z-10 mt-12 text-xs" style={{ color: "hsl(0 0% 40%)" }}>
+      <p className="relative z-10 mt-10 text-xs" style={{ color: "hsl(0 0% 40%)" }}>
         ✨ Feito com amor
       </p>
     </div>
