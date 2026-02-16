@@ -7,14 +7,16 @@ import link5 from "@/assets/link-5.png";
 import link6 from "@/assets/link-6.png";
 import link7 from "@/assets/link-7.png";
 
+const baseUrl = "https://wa.me/message/MR63SHC5DN3PA1";
+
 const links = [
-  { id: 1, image: link1, url: "https://wa.me/", alt: "Fique 100% protegido" },
-  { id: 2, image: link2, url: "https://wa.me/", alt: "Proteja seu maquinário" },
-  { id: 3, image: link3, url: "https://wa.me/", alt: "Seguro de vida" },
-  { id: 4, image: link4, url: "https://wa.me/", alt: "Proteja a conquista da família" },
-  { id: 5, image: link5, url: "https://wa.me/", alt: "Consórcio e Financiamento" },
-  { id: 6, image: link6, url: "https://wa.me/", alt: "Seguro safra" },
-  { id: 7, image: link7, url: "https://wa.me/", alt: "Outros serviços" },
+  { id: 1, image: link1, url: `${baseUrl}?text=${encodeURIComponent("como funciona o seguro de automóveis")}`, alt: "Fique 100% protegido" },
+  { id: 2, image: link2, url: `${baseUrl}?text=${encodeURIComponent("como funciona o seguro de automóveis")}`, alt: "Proteja seu maquinário" },
+  { id: 3, image: link3, url: `${baseUrl}?text=${encodeURIComponent("como funciona o seguro de vida")}`, alt: "Seguro de vida" },
+  { id: 4, image: link4, url: `${baseUrl}?text=${encodeURIComponent("como funciona o seguro residencial")}`, alt: "Proteja a conquista da família" },
+  { id: 5, image: link5, url: `${baseUrl}?text=${encodeURIComponent("como funciona o consorcio ou financiamento")}`, alt: "Consórcio e Financiamento" },
+  { id: 6, image: link6, url: `${baseUrl}?text=${encodeURIComponent("como funciona o seguro safra")}`, alt: "Seguro safra" },
+  { id: 7, image: link7, url: `${baseUrl}?text=${encodeURIComponent("opa tudo bom? quais os outros tipos de seguro")}`, alt: "Outros serviços" },
 ];
 
 const Index = () => {
