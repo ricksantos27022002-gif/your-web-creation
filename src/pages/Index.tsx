@@ -5,7 +5,7 @@ import link3 from "@/assets/link-3.png";
 import link4 from "@/assets/link-4.png";
 import link5 from "@/assets/link-5.png";
 import link6 from "@/assets/link-6.png";
-import link7 from "@/assets/link-7.png";
+
 
 const baseUrl = "https://wa.me/message/MR63SHC5DN3PA1";
 
@@ -16,7 +16,6 @@ const links = [
   { id: 4, image: link4, url: `${baseUrl}?text=${encodeURIComponent("como funciona o seguro residencial")}`, alt: "Proteja a conquista da família" },
   { id: 5, image: link5, url: `${baseUrl}?text=${encodeURIComponent("como funciona o consorcio ou financiamento")}`, alt: "Consórcio e Financiamento" },
   { id: 6, image: link6, url: `${baseUrl}?text=${encodeURIComponent("como funciona o seguro safra")}`, alt: "Seguro safra" },
-  { id: 7, image: link7, url: `${baseUrl}?text=${encodeURIComponent("opa tudo bom? quais os outros tipos de seguro")}`, alt: "Outros serviços" },
 ];
 
 const Index = () => {
@@ -33,7 +32,7 @@ const Index = () => {
           className="w-20 h-20 rounded-full object-cover mb-3"
         />
         <h1 className="text-xs sm:text-xl font-bold tracking-wide text-white whitespace-nowrap">
-          PEDRO HENRIQUE CORRETOR DE SEGUROS
+          CORRETORA DE SEGUROS / SUSEP-252172056
         </h1>
       </div>
 
